@@ -18,7 +18,7 @@ let blog = async function (req, res) {
       let tags = req.body.tags;
       let category = req.body.category;
       let subcategory = req.body.subcategory;
-      // if (data.length != 0) return res.status(400).send("Please Enter Data");
+      //  if (data.length != 0) return res.status(400).send("Please Enter Data");
       if (!title) return res.status(400).send("Please Enter title");
       if (!body) return res.status(400).send("Please Details about your Blog");
       if (!tags) return res.status(400).send("Please Enter Your Tags");
@@ -99,7 +99,7 @@ let updateblog = async function (req, res) {
 else{
 let update= await blogModel.findByIdAndUpdate({_id:blogid},{title:a,category:b,body:c,isPublished:d,publishedAt:e,$push:{subcategory:f,tags:g}},{new:true})
 res.status(200).send({status:true, data:update})
-}
+} 
 
   }
 
