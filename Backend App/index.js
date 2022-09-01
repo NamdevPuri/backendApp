@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
  require('dotenv').config()
  const app = express()
  const multer = require("multer");
-const route = require('./routes/route.js')
+const route = require('./routes/route')
 const { AppConfig } = require('aws-sdk');
 app.use(multer().any())
 
